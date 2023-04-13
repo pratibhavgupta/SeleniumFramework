@@ -30,7 +30,7 @@ public class ScreenShot {
 	public void captureScreenShot(){
 		
 		// to be changed 
-		String path = "C:\\Users\\Naveen\\Desktop\\screenshots\\";
+		String path = "C:\\Users\\Pratibhav\\Pictures\\Selenium_Framework\\";
 		String fileName ="";
 
 		GregorianCalendar calendar = new GregorianCalendar(); 

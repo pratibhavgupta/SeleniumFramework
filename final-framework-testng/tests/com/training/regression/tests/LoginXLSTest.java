@@ -46,7 +46,7 @@ public class LoginXLSTest {
 
 	@AfterMethod
 	public void tearDown() throws Exception {
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 		driver.quit();
 	}
 

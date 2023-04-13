@@ -5,34 +5,37 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPOM {
+public class LogoutPOM {
 	private WebDriver driver; 
 	
-	public LoginPOM(WebDriver driver) {
+	public LogoutPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(name="username")
-	private WebElement userName; 
+	@FindBy(className="oxd-userdropdown-tab")
+	private WebElement dropdown; 
 	
-	@FindBy(name="password")
-	private WebElement password;
+	@FindBy(xpath="//*[contains(text(),'Logout')]")
+	private WebElement logoutBtn;
 	
 	@FindBy(xpath="//*[@type='submit']")
 	private WebElement loginBtn; 
 	
 	public void sendUserName(String userName) {
-		this.userName.clear();
-		this.userName.sendKeys(userName);
+//		this.userName.clear();
+//		this.userName.sendKeys(userName);
 	}
 	
 	public void sendPassword(String password) {
-		this.password.clear(); 
-		this.password.sendKeys(password); 
+//		this.password.clear(); 
+//		this.password.sendKeys(password); 
 	}
 	
-	public void clickLoginBtn() {
-		this.loginBtn.click(); 
+	public void clickLogoutBtn() {
+		this.dropdown.click();
+		this.logoutBtn.click(); 
 	}
+	
+	
 }
